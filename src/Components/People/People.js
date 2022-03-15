@@ -1,6 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 
+const PeopleBanner = styled.div`
+  max-width: 1380px;
+  height: 50px;
+  background: #ffffff;
+  box-shadow: inset 0px -1px 0px #e5e5e5;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 18px;
+  margin-bottom: 10px;
+`;
+
 const GridContainer = styled.div`
   display: grid;
   grid-template-columns:
@@ -23,27 +37,33 @@ const GridItem = styled.div`
   align-items: center;
   justify-content: center;
   height: ${(props) => props.height};
+  background: #f9fafb;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
 `;
 
 const People = () => {
   return (
-    <GridContainer>
-      <GridWrapper>
-        <GridItem height="166px">Grid 1</GridItem>
-        <GridItem height="238px">Grid 2</GridItem>
-        <GridItem height="144px">Grid 3</GridItem>
-        <GridItem height="536px">Grid 4</GridItem>
-      </GridWrapper>
-      <GridWrapper>
-        <GridItem height="1095px">Grid 5</GridItem>
-      </GridWrapper>
-      <GridWrapper>
-        <GridItem height="226px">Grid 6</GridItem>
-        <GridItem height="428px">Grid 7</GridItem>
-        <GridItem height="194px">Grid 8</GridItem>
-        <GridItem height="213px">Grid 9</GridItem>
-      </GridWrapper>
-    </GridContainer>
+    <div>
+      <PeopleBanner>People</PeopleBanner>
+      <GridContainer>
+        <GridWrapper>
+          <GridItem height="166px"></GridItem>
+          <GridItem height="238px"></GridItem>
+          <GridItem height="144px"></GridItem>
+          <GridItem height="536px"></GridItem>
+        </GridWrapper>
+        <GridWrapper>
+          <GridItem height="1095px"></GridItem>
+        </GridWrapper>
+        <GridWrapper>
+          <GridItem height="226px"></GridItem>
+          <GridItem height="428px"></GridItem>
+          <GridItem height="194px"></GridItem>
+          <GridItem height="213px"></GridItem>
+        </GridWrapper>
+      </GridContainer>
+    </div>
   );
 };
 
