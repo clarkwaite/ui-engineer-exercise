@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PersonCard from "../PersonCard/PersonCard";
 
 const PeopleBanner = styled.div`
   max-width: 1380px;
@@ -22,6 +23,7 @@ const GridContainer = styled.div`
     minmax(min-content, 667px)
     minmax(min-content, 372px);
   grid-gap: 10px;
+  margin-left: 10px;
 `;
 
 const GridWrapper = styled.div`
@@ -42,13 +44,19 @@ const GridItem = styled.div`
   box-sizing: border-box;
 `;
 
+const PeopleContainer = styled.div`
+  background-color: #f7f9fa;
+`;
+
 const People = () => {
   return (
-    <div>
+    <PeopleContainer>
       <PeopleBanner>People</PeopleBanner>
       <GridContainer>
         <GridWrapper>
-          <GridItem height="166px"></GridItem>
+          <GridItem height="166px">
+            <PersonCard />
+          </GridItem>
           <GridItem height="238px"></GridItem>
           <GridItem height="144px"></GridItem>
           <GridItem height="536px"></GridItem>
@@ -63,7 +71,7 @@ const People = () => {
           <GridItem height="213px"></GridItem>
         </GridWrapper>
       </GridContainer>
-    </div>
+    </PeopleContainer>
   );
 };
 
