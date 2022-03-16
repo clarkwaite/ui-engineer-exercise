@@ -34,10 +34,6 @@ const GridWrapper = styled.div`
 `;
 
 const GridItem = styled.div`
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: ${(props) => props.height};
   background: #f9fafb;
   border: 1px solid #e5e5e5;
