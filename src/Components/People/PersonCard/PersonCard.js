@@ -14,8 +14,9 @@ import {
   PersonName,
   PersonTitle,
   PersonCompany,
-  ErrorWrapper,
 } from "./PersonCard.styles";
+import { DefaultError } from "../CommonComponents/Errors";
+import { Loading } from "../CommonComponents/Loading";
 
 const PCBodyIcons = [
   { Icon: <CloudIcon />, color: "#049BE5" },
@@ -50,17 +51,12 @@ const PersonCard = (props) => {
 
   //covers if the api call is slow
   if (!person) {
-    return <ErrorWrapper>Loading...</ErrorWrapper>;
+    return <Loading />;
   }
 
   //covers if the api call fails
   if (!Object.keys(person).length) {
-    return (
-      <ErrorWrapper>
-        There was a problem retrieving the requested data. Please reload the
-        page and try again.
-      </ErrorWrapper>
-    );
+    return <DefaultError />;
   }
 
   return (

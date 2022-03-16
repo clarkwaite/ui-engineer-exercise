@@ -53,12 +53,3 @@ export const PersonCompany = styled.span`
   color: #337ab7;
   margin-bottom: 16px;
 `;
-
-export const ErrorWrapper = styled.div`
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-  text-align: center;
-  color: #337ab7;
-  margin: 48px;
-`;

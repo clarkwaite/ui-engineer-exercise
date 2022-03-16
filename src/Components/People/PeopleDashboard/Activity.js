@@ -1,10 +1,14 @@
 import React from "react";
+import UpcomingActivities from "./UpcomingActivities";
+import PastActivities from "./PastActivities";
 
 const Activity = () => (
   <div>
     <div>Person Activity Filters</div>
-    <div>Upcoming Activities</div>
-    <div>Past Activities</div>
+
+    <UpcomingActivities />
+
+    <PastActivities />
   </div>
 );
 
