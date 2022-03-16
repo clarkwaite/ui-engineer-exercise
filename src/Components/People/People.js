@@ -51,7 +51,7 @@ const People = () => {
       <GridContainer>
         <GridWrapper>
           <GridItem height="166px">
-            <PersonCard />
+            <PersonCard name={"people"} />
           </GridItem>
           <GridItem height="238px"></GridItem>
           <GridItem height="144px"></GridItem>

@@ -37,12 +37,12 @@ const createIcons = (icons) => {
   ));
 };
 
-const PersonCard = () => {
+//this could easily be reusable by passing in the name in the api call
+const PersonCard = (props) => {
   const [person, setPerson] = useState("");
 
   useEffect(() => {
-    let personEndpoint =
-      "https://ui-offline-exercise.s3.amazonaws.com/data/people.json";
+    let personEndpoint = `https://ui-offline-exercise.s3.amazonaws.com/data/${props.name}.json`;
     FetchFromAPI(personEndpoint).then((data) => {
       setPerson(data);
     });
@@ -54,7 +54,7 @@ const PersonCard = () => {
   }
 
   //covers if the api call fails
-  if (!Object.keys(person)) {
+  if (!Object.keys(person).length) {
     return (
       <ErrorWrapper>
         There was a problem retrieving the requested data. Please reload the
