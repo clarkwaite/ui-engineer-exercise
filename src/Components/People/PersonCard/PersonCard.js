@@ -55,7 +55,7 @@ const PersonCard = (props) => {
   }
 
   //covers if the api call fails
-  if (!Object.keys(person).length) {
+  if (person === "error") {
     return <DefaultError />;
   }
 

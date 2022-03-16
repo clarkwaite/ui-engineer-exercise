@@ -4,7 +4,7 @@ async function FetchFromAPI(endpoint) {
     return await response.json();
   } catch (err) {
     console.log("Error Calling API", err);
-    return {};
+    return "error";
   }
 }
 

@@ -1,14 +1,19 @@
 import React from "react";
-import UpcomingActivities from "./UpcomingActivities";
-import PastActivities from "./PastActivities";
+import DisplayActivities from "./DisplayActivities";
 
 const Activity = () => (
   <div>
     <div>Person Activity Filters</div>
 
-    <UpcomingActivities />
+    <DisplayActivities
+      endpoint={"upcoming_activities"}
+      activityType={"Upcoming Activities"}
+    />
 
-    <PastActivities />
+    <DisplayActivities
+      endpoint={"past_activities"}
+      activityType={"Past Activities"}
+    />
   </div>
 );
 
