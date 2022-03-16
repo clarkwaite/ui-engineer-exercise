@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PersonCard from "../PersonCard/PersonCard";
+import PersonCard from "./PersonCard/PersonCard";
 import PeopleDashboard from "./PeopleDashboard/PeopleDashboard";
 
 const PeopleBanner = styled.div`

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import FetchFromAPI from "./../../Utils/FetchFromAPI";
-import { default as LinkedInIcon } from "../../_starter/shared/Icons/LinkedIn";
-import { default as LinkIcon } from "../../_starter/shared/Icons/Link";
-import { default as CloudIcon } from "../../_starter/shared/Icons/Cloud";
-import { default as TwitterIcon } from "../../_starter/shared/Icons/Twitter";
-import { default as EllipsisHorizontalIcon } from "../../_starter/shared/Icons/EllipsisHorizontal";
-import { default as StarOutlinedIcon } from "../../_starter/shared/Icons/StarOutlined";
+import FetchFromAPI from "../../../Utils/FetchFromAPI";
+import { default as LinkedInIcon } from "../../../_starter/shared/Icons/LinkedIn";
+import { default as LinkIcon } from "../../../_starter/shared/Icons/Link";
+import { default as CloudIcon } from "../../../_starter/shared/Icons/Cloud";
+import { default as TwitterIcon } from "../../../_starter/shared/Icons/Twitter";
+import { default as EllipsisHorizontalIcon } from "../../../_starter/shared/Icons/EllipsisHorizontal";
+import { default as StarOutlinedIcon } from "../../../_starter/shared/Icons/StarOutlined";
 import {
   IconWrapper,
   IconContainer,
@@ -46,7 +46,7 @@ const PersonCard = (props) => {
     FetchFromAPI(personEndpoint).then((data) => {
       setPerson(data);
     });
-  }, [setPerson]);
+  }, [setPerson, props.name]);
 
   //covers if the api call is slow
   if (!person) {
