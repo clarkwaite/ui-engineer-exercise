@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PersonCard from "../PersonCard/PersonCard";
+import PeopleDashboard from "./PeopleDashboard/PeopleDashboard";
 
 const PeopleBanner = styled.div`
   max-width: 1380px;
@@ -58,7 +59,9 @@ const People = () => {
           <GridItem height="536px"></GridItem>
         </GridWrapper>
         <GridWrapper>
-          <GridItem height="1095px"></GridItem>
+          <GridItem height="1095px">
+            <PeopleDashboard />
+          </GridItem>
         </GridWrapper>
         <GridWrapper>
           <GridItem height="226px"></GridItem>
