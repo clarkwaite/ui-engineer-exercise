@@ -5,7 +5,7 @@ const ComponentSelectorWrapper = styled.div`
   max-width: 667px;
   height: 48px;
   background: #ffffff;
-  border: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@ const SelectorText = styled.div`
   line-height: 16px;
   color: #3a3a3a;
   font-weight: ${(props) => (props.selected ? "600" : "400")};
-  border-bottom: ${(props) => (props.selected ? "1px solid blue" : "none")};
+  border-bottom: ${(props) => (props.selected ? "3px solid #4DC6FF" : "none")};
 `;
 
 const ComponentSelector = ({ view, setView }) => (

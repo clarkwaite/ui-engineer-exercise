@@ -14,6 +14,7 @@ import {
   PersonName,
   PersonTitle,
   PersonCompany,
+  PersonCardContainer,
 } from "./PersonCard.styles";
 import { DefaultError } from "../CommonComponents/Errors";
 import { Loading } from "../CommonComponents/Loading";
@@ -60,7 +61,7 @@ const PersonCard = (props) => {
   }
 
   return (
-    <>
+    <PersonCardContainer>
       <PersonCardHeader>{createIcons(PCHeaderIcons)}</PersonCardHeader>
       <PersonCardBody>
         <PersonName>{person.display_name}</PersonName>
@@ -68,7 +69,7 @@ const PersonCard = (props) => {
         <PersonCompany>{person.person_company_name}</PersonCompany>
         <IconContainer>{createIcons(PCBodyIcons)}</IconContainer>
       </PersonCardBody>
-    </>
+    </PersonCardContainer>
   );
 };
 

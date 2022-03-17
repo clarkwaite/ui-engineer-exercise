@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const PersonCardContainer = styled.div`
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  height: 166px;
+`;
+
 export const IconWrapper = styled.div`
   cursor: pointer;
   margin: 0px 4px;
