@@ -24,6 +24,12 @@ export const GridContainer = styled.div`
     minmax(min-content, 372px);
   grid-gap: 10px;
   margin-left: 10px;
+  @media (max-width: 769px) {
+    grid-template-columns: 1fr;
+    .dashboard {
+      order: -1;
+    }
+  }
 `;
 
 export const GridWrapper = styled.div`

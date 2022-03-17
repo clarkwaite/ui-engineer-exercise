@@ -35,11 +35,18 @@ export const ActivityButtonsWrapper = styled.span`
   justify-content: space-between;
   margin: 16px 0px 0px 21px;
   align-items: center;
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
 `;
 
 export const ActivityUtilsWrapper = styled.span`
   display: flex;
   align-items: center;
+  @media (max-width: 1024px) {
+    margin: 0px 0px 12px 21px;
+  }
 `;
 
 export const ActivityFilters = styled.span`

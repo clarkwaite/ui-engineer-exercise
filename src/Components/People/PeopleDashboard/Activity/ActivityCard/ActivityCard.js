@@ -13,6 +13,7 @@ import {
   ActivityCardWrapper,
   Card,
   DateTime,
+  DateTimeWrapper,
   CardTitle,
   CardSubtext,
   EmailContent,
@@ -61,14 +62,16 @@ const ActivityCard = ({ activityData }) => {
                   {activityData.dynamic_data.cadence_name}
                 </CardTitle>
               </CardTitle>
-              <DateTime>{dateOccurred}</DateTime>
               <CardSubtext>
                 <span>
                   Added by {activityData.dynamic_data.user_name} | Assigned to{" "}
                   {activityData.static_data.instigator.action_caller_name}
                 </span>
               </CardSubtext>
-              <DateTime>{timeOccurred}</DateTime>
+              <DateTimeWrapper>
+                <DateTime>{dateOccurred}</DateTime>
+                <DateTime>{timeOccurred}</DateTime>
+              </DateTimeWrapper>
             </Card>
           </ActivityCardWrapper>
         );
@@ -80,14 +83,16 @@ const ActivityCard = ({ activityData }) => {
             </IconWrapper>
             <Card>
               <CardTitle>{activityData.static_data.sentiment}</CardTitle>
-              <DateTime>{dateOccurred}</DateTime>
               <CardSubtext>
                 <span>
                   {activityData.dynamic_data.user_name} with{" "}
                   {activityData.dynamic_data.phone_number}
                 </span>
               </CardSubtext>
-              <DateTime>{timeOccurred}</DateTime>
+              <DateTimeWrapper>
+                <DateTime>{dateOccurred}</DateTime>
+                <DateTime>{timeOccurred}</DateTime>
+              </DateTimeWrapper>
             </Card>
           </ActivityCardWrapper>
         );
@@ -104,9 +109,11 @@ const ActivityCard = ({ activityData }) => {
                 </CardTitle>{" "}
                 <EmailContent>{activityData.static_data.body}</EmailContent>
               </CardTitle>
-              <DateTime>{dateOccurred}</DateTime>
               {emailNameAndIcons()}
-              <DateTime>{timeOccurred}</DateTime>
+              <DateTimeWrapper>
+                <DateTime>{dateOccurred}</DateTime>
+                <DateTime>{timeOccurred}</DateTime>
+              </DateTimeWrapper>
             </Card>
           </ActivityCardWrapper>
         );
@@ -120,9 +127,11 @@ const ActivityCard = ({ activityData }) => {
               <CardTitle color="#417CAA">
                 <span>{activityData.static_data.subject}</span>
               </CardTitle>
-              <DateTime>{dateOccurred}</DateTime>
               {emailNameAndIcons()}
-              <DateTime>{timeOccurred}</DateTime>
+              <DateTimeWrapper>
+                <DateTime>{dateOccurred}</DateTime>
+                <DateTime>{timeOccurred}</DateTime>
+              </DateTimeWrapper>
             </Card>
           </ActivityCardWrapper>
         );
@@ -134,9 +143,11 @@ const ActivityCard = ({ activityData }) => {
             </IconWrapper>
             <Card>
               <CardTitle>Marked as Success</CardTitle>
-              <DateTime>{dateOccurred}</DateTime>
               <CardSubtext>{activityData.dynamic_data.user_name}</CardSubtext>
-              <DateTime>{timeOccurred}</DateTime>
+              <DateTimeWrapper>
+                <DateTime>{dateOccurred}</DateTime>
+                <DateTime>{timeOccurred}</DateTime>
+              </DateTimeWrapper>
             </Card>
           </ActivityCardWrapper>
         );
@@ -155,14 +166,17 @@ const ActivityCard = ({ activityData }) => {
                   )}
                 </CardTitle>
               </CardTitle>
-              <DateTime>{dateOccurred}</DateTime>
+
               <CardSubtext>
                 <span>
                   {activityData.dynamic_data.user_name} to{" "}
                   {activityData.dynamic_data.user_name}
                 </span>
               </CardSubtext>
-              <DateTime>{timeOccurred}</DateTime>
+              <DateTimeWrapper>
+                <DateTime>{dateOccurred}</DateTime>
+                <DateTime>{timeOccurred}</DateTime>
+              </DateTimeWrapper>
             </Card>
           </ActivityCardWrapper>
         );

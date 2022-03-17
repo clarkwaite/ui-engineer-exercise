@@ -13,7 +13,7 @@ export const Card = styled.div`
   grid-template-columns: auto auto;
   grid-template-rows: 1fr 1fr;
   height: 66px;
-  background-color: ${getColor("white")};;
+  background-color: ${getColor("white")};
   border: 1px solid #${getColor("greyLightest")};
   box-sizing: border-box;
   border-radius: 2px;
@@ -21,7 +21,22 @@ export const Card = styled.div`
   align-items: center;
   grid-gap: 7px;
   text-align: left;
-}
+  @media (max-width: 1024px) {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 1fr);
+  }
+`;
+
+export const DateTimeWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  grid-column: 2;
+  grid-row: span 2;
+  @media (max-width: 1024px) {
+    grid-column: 1;
+    grid-row: 3;
+    flex-direction: row;
+  }
 `;
 
 export const DateTime = styled.span`
@@ -31,6 +46,10 @@ export const DateTime = styled.span`
   color: #7a7f88;
   font-style: normal;
   text-align: right;
+  margin: 4px 0px;
+  @media (max-width: 1024px) {
+    margin: 0px 12px 0px 0px;
+  }
 `;
 
 export const CardTitle = styled.span`
@@ -42,6 +61,8 @@ export const CardTitle = styled.span`
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
+  grid-row: 1;
+  grid-column: 1;
 `;
 
 export const CardSubtext = styled.span`
@@ -53,6 +74,8 @@ export const CardSubtext = styled.span`
   text-align: left;
   display: flex;
   align-items: center;
+  grid-row: 2;
+  grid-column: 1;
 `;
 
 export const EmailContent = styled.span`

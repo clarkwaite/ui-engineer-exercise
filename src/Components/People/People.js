@@ -22,7 +22,7 @@ const People = () => {
           <GridItem height="144px"></GridItem>
           <GridItem height="536px"></GridItem>
         </GridWrapper>
-        <GridWrapper>
+        <GridWrapper className="dashboard">
           <GridItem height="1095px">
             <PeopleDashboard />
           </GridItem>
