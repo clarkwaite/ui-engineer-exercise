@@ -1,7 +1,7 @@
 import React from "react";
 import People from "./Components/People/People";
-import styled from "styled-components";
 import { getColor } from "./_starter/theme/theme";
+import styled from "styled-components";
 
 const AppContainer = styled.div`
   font-family: "proxima-nova";

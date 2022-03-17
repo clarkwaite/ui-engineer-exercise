@@ -21,7 +21,8 @@ const SelectorText = styled.div`
   line-height: 16px;
   color: #3a3a3a;
   font-weight: ${(props) => (props.selected ? "600" : "400")};
-  border-bottom: ${(props) => (props.selected ? "3px solid #4DC6FF" : "none")};
+  box-shadow: ${(props) =>
+    props.selected ? "inset 0 -11px 1px -8px #4dc6ff" : "none"};
 `;
 
 const ComponentSelector = ({ view, setView }) => (
