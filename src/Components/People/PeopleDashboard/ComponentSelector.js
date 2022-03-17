@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { getColor } from "../../../_starter/theme/theme";
 
 const ComponentSelectorWrapper = styled.div`
   max-width: 667px;
   height: 48px;
-  background: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
+  background: ${getColor("white")};
+  border-bottom: 1px solid #${getColor("greyLightest")};
   box-sizing: border-box;
   display: flex;
   align-items: center;

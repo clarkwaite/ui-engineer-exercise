@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import FetchFromAPI from "../../../../Utils/FetchFromAPI";
 import { Loading } from "../../../CommonComponents/Loading";
 import { DefaultError } from "../../../CommonComponents/Errors";
-import ActivityCard from "./ActivityCard";
+import ActivityCard from "./ActivityCard/ActivityCard";
+import { getColor } from "../../../../_starter/theme/theme";
 import styled from "styled-components";
 
 const ActivityTitle = styled.div`
@@ -10,7 +11,7 @@ const ActivityTitle = styled.div`
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
-  color: #4f5359;
+  color: ${getColor("greyDark")};
   margin: 16px 0px 0px 21px;
 `;
 
@@ -19,7 +20,7 @@ const NoActivities = styled.span`
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  color: #4f5359;
+  color: ${getColor("greyDark")};
 `;
 
 const DisplayActivitiesContainer = styled.div`

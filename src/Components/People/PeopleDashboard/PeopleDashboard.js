@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import ComponentSelector from "./ComponentSelector";
-import Activity from "./Activities/Activity";
+import Activity from "./Activity/Activity";
 import Tracking from "./Tracking";
 import Reminders from "./Reminders";
 import styled from "styled-components";
+import { getColor } from "../../../_starter/theme/theme";
 
 const PeopleDashboardContainer = styled.div`
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
+  background: ${getColor("white")};
+  border-bottom: 1px solid #${getColor("greyLightest")};
   height: 1095px;
   margin-bottom: 43px;
 `;

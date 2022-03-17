@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { getColor } from "../../../_starter/theme/theme";
 
 export const PersonCardContainer = styled.div`
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
+  background: ${getColor("white")};
+  border-bottom: 1px solid ${getColor("greyLightest")};
   box-sizing: border-box;
   height: 166px;
 `;
@@ -40,7 +41,7 @@ export const PersonName = styled.span`
   font-size: 24px;
   line-height: 24px;
   text-align: center;
-  color: #4f5359;
+  color: ${getColor("greyDark")};
   margin-bottom: 6px;
 `;
 
@@ -49,7 +50,7 @@ export const PersonTitle = styled.span`
   font-size: 14px;
   line-height: 17px;
   text-align: center;
-  color: #4f5359;
+  color: ${getColor("greyDark")};
 `;
 
 export const PersonCompany = styled.span`
