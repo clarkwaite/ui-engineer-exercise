@@ -16,8 +16,8 @@ import {
   PersonCompany,
   PersonCardContainer,
 } from "./PersonCard.styles";
-import { DefaultError } from "../CommonComponents/Errors";
-import { Loading } from "../CommonComponents/Loading";
+import { DefaultError } from "../../CommonComponents/Errors";
+import { Loading } from "../../CommonComponents/Loading";
 
 const PCBodyIcons = [
   { Icon: <CloudIcon />, color: "#049BE5" },

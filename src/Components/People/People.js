@@ -15,6 +15,7 @@ const PeopleBanner = styled.div`
   font-size: 20px;
   line-height: 18px;
   margin-bottom: 10px;
+  border-right: 1px solid #e5e5e5;
 `;
 
 const GridContainer = styled.div`
@@ -36,7 +37,6 @@ const GridWrapper = styled.div`
 
 const GridItem = styled.div`
   height: ${(props) => props.height};
-  background: #f9fafb;
   border: 1px solid #e5e5e5;
   box-sizing: border-box;
 `;
