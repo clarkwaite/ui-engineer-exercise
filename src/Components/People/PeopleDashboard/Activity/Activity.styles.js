@@ -17,6 +17,11 @@ export const PersonFilterButton = styled.div`
   line-height: 16px;
   justify-content: center;
   cursor: pointer;
+  @media (max-width: ${getBreakpoint("sm")}) {
+    width: 65px;
+    font-size: 12px;
+    line-height: 14px;
+  }
 `;
 
 export const ButtonSeparator = styled.span`
