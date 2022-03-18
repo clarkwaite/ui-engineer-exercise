@@ -51,7 +51,7 @@ const ActivityCard = ({ activityData }) => {
     switch (activityData.type) {
       case "added_to_cadence":
         return (
-          <ActivityCardWrapper>
+          <ActivityCardWrapper data-testid="activity-card-wrapper">
             <IconWrapper background="#F0F9FE" color="#417CAA">
               <RocketIcon />
             </IconWrapper>
@@ -77,7 +77,7 @@ const ActivityCard = ({ activityData }) => {
         );
       case "call":
         return (
-          <ActivityCardWrapper>
+          <ActivityCardWrapper data-testid="activity-card-wrapper">
             <IconWrapper background="#E7F8F8" color="#17BBB6">
               <PhoneIcon />
             </IconWrapper>
@@ -98,7 +98,7 @@ const ActivityCard = ({ activityData }) => {
         );
       case "email_reply":
         return (
-          <ActivityCardWrapper>
+          <ActivityCardWrapper data-testid="activity-card-wrapper">
             <IconWrapper background="#EDEEFA" color="#2A409C">
               <ReplyIcon />
             </IconWrapper>
@@ -119,7 +119,7 @@ const ActivityCard = ({ activityData }) => {
         );
       case "sent_email":
         return (
-          <ActivityCardWrapper>
+          <ActivityCardWrapper data-testid="activity-card-wrapper">
             <IconWrapper background="#EDEEFA" color="#2A409C">
               <PaperPlaneIcon />
             </IconWrapper>
@@ -137,7 +137,7 @@ const ActivityCard = ({ activityData }) => {
         );
       case "success":
         return (
-          <ActivityCardWrapper>
+          <ActivityCardWrapper data-testid="activity-card-wrapper">
             <IconWrapper background="#EDEEFA" color="#2A409C">
               <BadgeIcon />
             </IconWrapper>
@@ -153,7 +153,7 @@ const ActivityCard = ({ activityData }) => {
         );
       case "voicemail":
         return (
-          <ActivityCardWrapper>
+          <ActivityCardWrapper data-testid="activity-card-wrapper">
             <IconWrapper background="#E7F8F8" color="#17BBB6">
               <VoicemailIcon />
             </IconWrapper>

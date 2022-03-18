@@ -61,7 +61,7 @@ const PersonCard = (props) => {
   }
 
   return (
-    <PersonCardContainer>
+    <PersonCardContainer data-testid="person-card-container">
       <PersonCardHeader>{createIcons(PCHeaderIcons)}</PersonCardHeader>
       <PersonCardBody>
         <PersonName>{person.display_name}</PersonName>

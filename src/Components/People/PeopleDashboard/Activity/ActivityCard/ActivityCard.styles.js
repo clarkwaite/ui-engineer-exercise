@@ -14,7 +14,7 @@ export const Card = styled.div`
   grid-template-rows: 1fr 1fr;
   height: 66px;
   background-color: ${getColor("white")};
-  border: 1px solid #${getColor("greyLightest")};
+  border: 1px solid ${getColor("greyLightest")};
   box-sizing: border-box;
   border-radius: 2px;
   padding: 16px;

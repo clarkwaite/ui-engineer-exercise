@@ -5,7 +5,7 @@ export const PeopleBanner = styled.div`
   max-width: 1380px;
   height: 50px;
   background: ${getColor("white")};
-  box-shadow: inset 0px -1px 0px #${getColor("greyLightest")};
+  box-shadow: inset 0px -1px 0px ${getColor("greyLightest")};
   display: flex;
   align-items: center;
   padding-left: 20px;
@@ -13,7 +13,7 @@ export const PeopleBanner = styled.div`
   font-size: 20px;
   line-height: 18px;
   margin-bottom: 10px;
-  border-right: 1px solid #${getColor("greyLightest")};
+  border-right: 1px solid ${getColor("greyLightest")};
 `;
 
 export const GridContainer = styled.div`

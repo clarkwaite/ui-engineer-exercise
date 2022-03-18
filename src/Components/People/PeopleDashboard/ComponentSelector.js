@@ -6,7 +6,7 @@ const ComponentSelectorWrapper = styled.div`
   max-width: 667px;
   height: 48px;
   background: ${getColor("white")};
-  border-bottom: 1px solid #${getColor("greyLightest")};
+  border-bottom: 1px solid {getColor("greyLightest")};
   box-sizing: border-box;
   display: flex;
   align-items: center;

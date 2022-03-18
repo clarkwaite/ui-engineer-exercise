@@ -47,8 +47,8 @@ const DisplayActivities = ({ endpoint, activityType }) => {
   }
 
   const mapActivities = () => {
-    return activities.data.length ? (
-      activities.data.map((a) => <ActivityCard activityData={a} />)
+    return activities.data && activities.data.length ? (
+      activities.data.map((a) => <ActivityCard key={a.id} activityData={a} />)
     ) : (
       <NoActivities>
         Once actions are scheduled, they’ll appear here
@@ -57,7 +57,7 @@ const DisplayActivities = ({ endpoint, activityType }) => {
   };
 
   return (
-    <div>
+    <div data-testid="display-activities">
       <ActivityTitle>{activityType}</ActivityTitle>
       <DisplayActivitiesContainer>{mapActivities()}</DisplayActivitiesContainer>
     </div>

@@ -38,7 +38,7 @@ const AddNote = () => (
     <UtilIcon>
       <PlusIcon />
     </UtilIcon>
-    Add A Note
+    Add a Note
   </ActivityUtils>
 );
 
@@ -52,7 +52,7 @@ const LogCall = () => (
 );
 
 const Activity = () => (
-  <div>
+  <div data-testid="activity-head">
     <ActivityButtonsWrapper>
       <ActivityFilters>
         <PersonButton />

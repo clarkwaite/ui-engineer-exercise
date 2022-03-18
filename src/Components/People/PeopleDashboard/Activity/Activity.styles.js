@@ -35,7 +35,7 @@ export const ActivityButtonsWrapper = styled.span`
   justify-content: space-between;
   margin: 16px 0px 0px 21px;
   align-items: center;
-  @media (max-width: 1024px) {
+  @media (max-width: 850px) {
     flex-direction: column-reverse;
     justify-content: center;
   }
@@ -44,7 +44,7 @@ export const ActivityButtonsWrapper = styled.span`
 export const ActivityUtilsWrapper = styled.span`
   display: flex;
   align-items: center;
-  @media (max-width: 1024px) {
+  @media (max-width: 850px) {
     margin: 0px 0px 12px 21px;
   }
 `;
@@ -61,13 +61,13 @@ export const ButtonIcon = styled.span`
 
 export const UtilIcon = styled.span`
   font-size: 14px;
-  margin: 6px 7px 0px 0px;
+  margin: 6px 5px 0px 0px;
 `;
 
 export const ActivityUtils = styled.span`
   font-size: 14px;
   line-height: 16px;
-  margin-right: 26px;
+  margin-right: 28px;
   font-weight: 600;
   display: flex;
   align-items: center;
