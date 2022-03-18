@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { getColor } from "../../../../_starter/theme/theme";
+import { getBreakpoint } from "../../../../_starter/theme/theme";
 
 export const PersonFilterButton = styled.div`
   display: flex;
@@ -15,6 +16,7 @@ export const PersonFilterButton = styled.div`
   font-size: 14px;
   line-height: 16px;
   justify-content: center;
+  cursor: pointer;
 `;
 
 export const ButtonSeparator = styled.span`
@@ -35,17 +37,19 @@ export const ActivityButtonsWrapper = styled.span`
   justify-content: space-between;
   margin: 16px 0px 0px 21px;
   align-items: center;
-  @media (max-width: 850px) {
-    flex-direction: column-reverse;
-    justify-content: center;
-  }
 `;
 
 export const ActivityUtilsWrapper = styled.span`
   display: flex;
   align-items: center;
-  @media (max-width: 850px) {
-    margin: 0px 0px 12px 21px;
+  @media (max-width: ${getBreakpoint("md")}) {
+    display: inline;
+  }
+  @media (max-width: ${getBreakpoint("ms")}) {
+    display: flex;
+  }
+  @media (max-width: ${getBreakpoint("sm")}) {
+    display: inline;
   }
 `;
 
@@ -72,4 +76,5 @@ export const ActivityUtils = styled.span`
   display: flex;
   align-items: center;
   color: ${getColor("blue")};
+  cursor: pointer;
 `;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { getColor } from "../../_starter/theme/theme";
+import { getBreakpoint } from "../../_starter/theme/theme";
 
 export const PeopleBanner = styled.div`
   max-width: 1380px;
@@ -19,12 +20,12 @@ export const PeopleBanner = styled.div`
 export const GridContainer = styled.div`
   display: grid;
   grid-template-columns:
-    minmax(min-content, 300px)
+    minmax(100px, 300px)
     minmax(min-content, 667px)
     minmax(min-content, 372px);
   grid-gap: 10px;
   margin-left: 10px;
-  @media (max-width: 769px) {
+  @media (max-width: ${getBreakpoint("ms")}) {
     grid-template-columns: 1fr;
     .dashboard {
       order: -1;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { getColor } from "../../../../../_starter/theme/theme";
+import { getBreakpoint } from "../../../../../_starter/theme/theme";
 
 export const ActivityCardWrapper = styled.div`
   display: grid;
@@ -21,7 +22,7 @@ export const Card = styled.div`
   align-items: center;
   grid-gap: 7px;
   text-align: left;
-  @media (max-width: 1024px) {
+  @media (max-width: ${getBreakpoint("md")}) {
     grid-template-columns: auto;
     grid-template-rows: repeat(3, 1fr);
   }
@@ -32,7 +33,7 @@ export const DateTimeWrapper = styled.div`
   flex-direction: column;
   grid-column: 2;
   grid-row: span 2;
-  @media (max-width: 1024px) {
+  @media (max-width: ${getBreakpoint("md")}) {
     grid-column: 1;
     grid-row: 3;
     flex-direction: row;
@@ -47,7 +48,7 @@ export const DateTime = styled.span`
   font-style: normal;
   text-align: right;
   margin: 4px 0px;
-  @media (max-width: 1024px) {
+  @media (max-width: ${getBreakpoint("md")}) {
     margin: 0px 12px 0px 0px;
   }
 `;
